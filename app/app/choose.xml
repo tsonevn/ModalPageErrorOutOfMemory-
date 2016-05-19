@@ -1,0 +1,42 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" shownModally="onShownModallyChoose" loaded="pageLoaded" navigatedTo="onNavigatedTo">
+      <GridLayout rows="auto, *" columns="*, *" >
+        <GridLayout row="0" colSpan="2">
+           <GridLayout columns="*" rows="50" cssClass="menuHeaderBackground">
+		    <GridLayout col="0" columns="*" rows="50" cssClass="menuHeaderBackground" style="vertical-align: bottom;">
+				<Image col="0" cssClass="imgKid" id="imgMenu" src="~/res/DayCareLogoWhite.png" height="28" style="margin-left: 10; horizontal-align: left; vertical-align:center;"/>
+		    </GridLayout>
+		    </GridLayout>
+        </GridLayout>
+        
+        <GridLayout row="1" col="0" cssClass="ChoosePageBackground">
+            
+        </GridLayout>
+        <GridLayout row="1" col="1" cssClass="ChoosePageBackgroundStaff">
+            
+        </GridLayout>
+       
+          <GridLayout colSpan="2" row="1" rows="auto" style="margin-left: 10; margin-right: 10;">
+          
+             <GridLayout row="0" rows="auto, auto, auto, auto, *, auto" cssClass="frontBGText" >
+              <Border cornerRadius="0" borderWidth="0.0" borderColor="#cccccc" row="0" height="auto" style="margin-right: 10;">
+      			<GridLayout row="2" rows="10, auto, 10">
+                    <StackLayout orientation="vertical" row="1" >
+                        <Label textWrap="true" text="Velkommen til DayCare" style="margin-left: 10; margin-top: 0;horizontal-align:left; vertical-align:top;" cssClass="mediumTextWhiteBold"/>
+                        <Label textWrap="true" text="For at få adgang skal din telefon, tablet eller computer først registreres på admin.daycare.dk." style="margin-left: 10; margin-top: 5;horizontal-align:left; vertical-align:center;" cssClass="mediumTextWhite"/>
+                        <Label textWrap="true" text="NB: For at blive registreret kræver det at du har et barn der er registreret i DayCare, eller at du er ansat som personale i en institution der benytter DayCare!" style="margin-left: 10; margin-top: 5; horizontal-align:left; vertical-align:center;" cssClass="mediumTextWhite"/>
+                    </StackLayout>
+                </GridLayout>
+    		  </Border>
+            </GridLayout>
+          </GridLayout>
+            
+              <GridLayout tap="gotoParentLogin" row="1" col="0" rows="50" columns="*" style="background-color: #FF007AFF; padding: 5; vertical-align: bottom; margin-bottom:10; margin-left: 5; margin-right: 5;">
+                    <Label text="Jeg er forældre" cssClass="largeTextWhite" textWrap="true" style="horizontal-align: center;" /> 
+                 </GridLayout>
+                 
+                  <GridLayout tap="gotoStaffLogin" row="1" col="1" rows="50" columns="*" style="background-color: #FF007AFF; padding: 5; vertical-align: bottom; margin-bottom:10; margin-left: 5; margin-right: 5;">
+                    <Label text="Jeg er personale" cssClass="largeTextWhite" textWrap="true" style="horizontal-align: center;" /> 
+                  </GridLayout>        
+       <ActivityIndicator colSpan="2" ios:backgroundColor="black" ios:style="opacity: 0.2" ios:width="*" ios:height="*" android:width="100" android:height="100" rowSpan="99" busy="{{ isLoading }}" />
+      </GridLayout> 
+</Page>
